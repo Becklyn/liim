@@ -1,25 +1,14 @@
 {
     "name": "liim",
     "description": "liim: a tiny service container for JavaScript",
-    "version": "0.0.1",
+    "license": "BSD-3-Clause",
+    "author": "Becklyn Studios <hello@becklyn.com>",
+    "homepage": "https://github.com/Becklyn/liim",
     "repository": {
         "type": "git",
         "url": "git://github.com/Becklyn/liim.git"
     },
-    "homepage": "https://github.com/Becklyn/liim",
-    "license": "BSD-3-Clause",
-    "author": {
-        "name": "Becklyn Studios",
-        "email": "hello@becklyn.com"
-    },
-    "keywords": [
-        "becklyn",
-        "library",
-        "di",
-        "dependency-injection",
-        "service-container",
-        "tiny"
-    ],
+    "version": "0.0.1",
     "scripts": {
         "build": "node_modules/.bin/tsc --noEmitOnError --noErrorTruncation --listEmittedFiles --pretty --noUnusedLocals",
         "dev": "node_modules/.bin/tsc --noEmitOnError --noErrorTruncation --listEmittedFiles --pretty -w",
@@ -28,9 +17,18 @@
     },
     "devDependencies": {
         "ava": "^1.4.1",
+        "bundlesize": "^0.17.1",
         "esm": "^3.2.22",
         "typescript": "^3.4.5"
     },
+    "keywords": [
+        "becklyn",
+        "dependency-injection",
+        "di",
+        "library",
+        "service-container",
+        "tiny"
+    ],
     "ava": {
         "files": [
             "tests/*"
@@ -38,5 +36,11 @@
         "require": [
             "esm"
         ]
-    }
+    },
+    "bundlesize": [
+        {
+            "path": "./src/index.js",
+            "maxSize": "450 B"
+        }
+    ]
 }
