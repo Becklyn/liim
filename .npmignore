@@ -1,0 +1,13 @@
+.DS_Store
+/.circleci
+/.github
+/.idea
+/.travis.yml
+/.vscode
+/tsconfig.json
+/tests
+
+# ignore all .ts when publishing
+*.ts
+*.tsx
+!*.d.ts
