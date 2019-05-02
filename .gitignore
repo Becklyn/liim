@@ -6,4 +6,4 @@
 *.d.ts
 *.js
 !/src/@types/*.d.ts
-!/tests/*.js
+!/tests/**/*.js
