@@ -1,7 +1,7 @@
-type ServiceFactoryFunction = (liim: Liim) => Service;
-interface Service {}
+// internal type
+import {Service, ServiceContainer, ServiceFactory} from "./@types/liim";
 
-type ServiceFactory = Service | ServiceFactoryFunction;
+
 interface ServiceRegistry {
     [name: string]: ServiceFactory;
 }
@@ -9,7 +9,7 @@ interface ServiceRegistry {
 /**
  * A super simple service container
  */
-export default class Liim
+export default class Liim implements ServiceContainer
 {
     protected container: ServiceRegistry = {};
 
