@@ -1,0 +1,42 @@
+{
+    "name": "liim",
+    "description": "liim: a tiny service container for JavaScript",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Becklyn/liim.git"
+    },
+    "homepage": "https://github.com/Becklyn/liim",
+    "license": "BSD-3-Clause",
+    "author": {
+        "name": "Becklyn Studios",
+        "email": "hello@becklyn.com"
+    },
+    "keywords": [
+        "becklyn",
+        "library",
+        "di",
+        "dependency-injection",
+        "service-container",
+        "tiny"
+    ],
+    "scripts": {
+        "build": "node_modules/.bin/tsc --noEmitOnError --noErrorTruncation --listEmittedFiles --pretty --noUnusedLocals",
+        "dev": "node_modules/.bin/tsc --noEmitOnError --noErrorTruncation --listEmittedFiles --pretty -w",
+        "prepublishOnly": "npm run-script build",
+        "test": "ava"
+    },
+    "devDependencies": {
+        "ava": "^1.4.1",
+        "esm": "^3.2.22",
+        "typescript": "^3.4.5"
+    },
+    "ava": {
+        "files": [
+            "tests/*"
+        ],
+        "require": [
+            "esm"
+        ]
+    }
+}
