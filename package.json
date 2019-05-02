@@ -1,6 +1,6 @@
 {
     "name": "liim",
-    "description": "liim: a tiny service container for JavaScript",
+    "description": "Liim: a tiny service container for JavaScript",
     "license": "BSD-3-Clause",
     "author": "Becklyn Studios <hello@becklyn.com>",
     "homepage": "https://github.com/Becklyn/liim",
