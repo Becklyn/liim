@@ -34,7 +34,7 @@ export default class Liim implements ServiceContainer
     /**
      * Gets a service
      */
-    public get (name: string): Service
+    public get <TService extends Service>(name: string): TService
     {
         let service = this.container[name];
 
@@ -48,7 +48,7 @@ export default class Liim implements ServiceContainer
             return this.container[name] = service(this);
         }
 
-        return service;
+        return service as TService;
     }
 
 
