@@ -41,14 +41,14 @@ Services with a service factory function will only be created when the service i
 You can get services using the `.get()` method:
 
 ```js
-liim.get("service-name");
+liim.get<Service>("service-name");
 ```
 
 This method will throw if the service is missing. If the service is an optional requirement
 for your app, you should check on existence with
 
 ```js
-if (liim.has("serice-name"))
+if (liim.has("service-name"))
 {
     // service is defined
 }
